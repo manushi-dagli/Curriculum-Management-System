@@ -1,0 +1,12 @@
+.margint{
+    margin-top: 2.8rem;
+}
+
+.title{
+    position: absolute;
+    align-self: center;
+    font-size: 2rem;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

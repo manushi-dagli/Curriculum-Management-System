@@ -1,0 +1,47 @@
+.cont-1 {
+  width: 50%;
+  background-color: #222;
+  color: white;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="number"]
+input[type="password"],
+input[type="email"] {
+  width: 80%;
+  border-color: black;
+  border-radius: 2px;
+  padding: 7px;
+  margin-bottom: 1%;
+}
+
+.dark-toast {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-toast .Toastify__close-button {
+  color: #fff;
+}
+
+.title{
+  position: absolute;
+  align-self: center;
+  font-size: 2rem;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 850px){
+  .cont-1{
+      width: 80%;
+  }
+}

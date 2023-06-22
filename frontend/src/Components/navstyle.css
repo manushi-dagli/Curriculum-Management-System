@@ -1,0 +1,158 @@
+.NavbarItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 30px;
+    background-color: #222;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 94%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.logo {
+    color: white;
+    justify-self: start;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0;
+}
+
+.fa-react {
+    margin-left: 0.2rem;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    margin: 0;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+
+.nav-links i {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.nav-links:hover {
+    background-color: rgb(80, 80, 238);
+    color: white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.coolBeans {
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.coolBeans:hover {
+    border: 2px solid transparent;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.coolBeans:active {
+    color: darkgray;
+}
+
+.fa-bars,
+.fa-times {
+    color: white;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav-links-mobile {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background-color: #fafafa;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 850px) {
+    .NavbarItem {
+        z-index: 99;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: rgba(255, 255, 255, .25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+        backdrop-filter: blur(4px);
+        border-radius: 13px;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 110%;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        left: 0%;
+    }
+
+    .nav-links {
+        display: block;
+        widows: 100%;
+        padding: 2rem 0;
+        color: #222;
+    }
+
+    .nav-links:hover {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links-mobile {
+        padding: 1.5rem;
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+    }
+}

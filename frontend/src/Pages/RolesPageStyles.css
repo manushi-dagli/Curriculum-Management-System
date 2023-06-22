@@ -1,0 +1,59 @@
+.rolescontainer {
+    width: 50%;
+    background-color: #222;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.roleButton {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background-color: #fafafa;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+    margin: 20px;
+    cursor: pointer;
+    width: 80%;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.roleButton:hover {
+    border: 2px solid transparent;
+    color: black;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.roleButton:active {
+    color: darkgray;
+}
+
+.title {
+    position: absolute;
+    align-self: center;
+    font-size: 2rem;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 850px) {
+    .rolescontainer {
+        width: 80%;
+    }
+}

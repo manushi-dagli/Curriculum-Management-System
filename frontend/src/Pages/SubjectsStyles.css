@@ -1,0 +1,60 @@
+.subjectscont{
+    width: 65%;
+    max-height: 75%;
+    background-color: #222;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.title{
+    position: absolute;
+    align-self: center;
+    font-size: 2rem;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: 1px solid #515151;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+    color: black;
+}
+
+table tr:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(190, 190, 190);
+    color: #222;
+}
+
+@media screen and (max-width: 850px){
+    .subjectscont{
+        width: 80%;
+    }
+}
