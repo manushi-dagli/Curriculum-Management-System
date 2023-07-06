@@ -1,7 +1,7 @@
-.subjectscont{
+.subjectscont {
     width: 65%;
     max-height: 75%;
-    background-color: #222;
+    background-color: black;
     color: white;
     position: absolute;
     top: 55%;
@@ -13,15 +13,14 @@
     overflow: auto;
 }
 
-.title{
+.title {
     position: absolute;
     align-self: center;
     font-size: 2rem;
     top: 110px;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
+}
 
 table {
     font-family: Arial, Helvetica, sans-serif;
@@ -50,11 +49,11 @@ table th {
     padding-bottom: 12px;
     text-align: center;
     background-color: rgb(190, 190, 190);
-    color: #222;
+    color: black;
 }
 
-@media screen and (max-width: 850px){
-    .subjectscont{
+@media screen and (max-width: 850px) {
+    .subjectscont {
         width: 80%;
     }
 }

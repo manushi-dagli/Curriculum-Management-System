@@ -2,7 +2,7 @@
     width: 65%;
     height: 70%;
     max-height: 550px;
-    background-color: #222;
+    background-color: black;
     color: white;
     position: absolute;
     margin-top: 1%;
@@ -13,7 +13,6 @@
     text-align: center;
     padding: 20px;
     overflow: auto;
-
 }
 
 .inline {
@@ -23,29 +22,27 @@
     align-items: center;
 }
 
-.inline input{
+.inline input {
     height: 1.4rem;
     font-size: 1.1rem;
     border-radius: 5px;
 }
 
-.block1{
+.block1 {
     width: 33%;
 }
 
-.block2{
+.block2 {
     width: 50%;
 }
 
-.block3{
+.block3 {
     width: 20%;
 }
 
-.block4{
+.block4 {
     width: 25%;
 }
-
-
 
 .gap3 {
     max-width: 200px;
@@ -97,33 +94,28 @@
     height: 100%;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
     .inline {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
-    .inline input{
+    .inline input {
         height: 1.4rem;
         font-size: 1.1rem;
         border-radius: 5px;
     }
-    
-    .block1{
+    .block1 {
         width: 100%;
     }
-    
-    .block2{
+    .block2 {
         width: 100%;
     }
-    
-    .block3{
+    .block3 {
         width: 100%;
     }
-    
-    .block4{
+    .block4 {
         width: 100%;
     }
 }

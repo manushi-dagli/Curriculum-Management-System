@@ -3,15 +3,16 @@
     width: 15%;
     position: fixed;
     z-index: 1;
-    margin-top: 5%;
+    margin-top: 1.5%;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #222;
+    background-color: black;
     text-align: center;
-    border-radius: 5px;
-    top: 15%
+    /* border-radius: 5px; */
+    /* border-radius: 20px; */
+    /* top: 15% */
 }
 
 .sidenav a {
@@ -21,8 +22,8 @@
     display: block;
     transition: 0.3s;
     color: white;
-    border-top: 2px solid rgb(137, 137, 137);
-    border-bottom: 2px solid rgb(137, 137, 137);
+    /* border-top: 2px solid rgb(137, 137, 137); */
+    border-bottom: 1px solid rgb(137, 137, 137);
 }
 
 .sidenav a:hover {
@@ -45,35 +46,28 @@
     .sidenavin {
         width: 30px;
     }
-
-    .sidenavout{
+    .sidenavout {
         width: 200px;
     }
-
-    .sidenav a{
+    .sidenav a {
         color: white;
     }
-
     .NavbarItem {
         z-index: 99;
     }
-
     .hide {
         display: none;
     }
-
     .nav-links {
         display: block;
         widows: 100%;
         padding: 2rem 0;
-        color: #222;
+        color: black;
     }
-
     .nav-links:hover {
         background: rgba(255, 255, 255, 0.25);
         backdrop-filter: blur(20px);
     }
-
     .menu-icon {
         display: block;
     }

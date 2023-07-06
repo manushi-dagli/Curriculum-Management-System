@@ -194,6 +194,11 @@ const FacultySubjectdetails = () => {
                             return `Subject PDF stored Successfully!!`
                         },
                         icon: "🚀",
+                        onClose: () => {
+                            setTimeout(() => {
+                                document.getElementById("updatesubjectform").reset();
+                            }, 5000);
+                        }
                     },
                     error: {
                         render({ data }) {
@@ -257,11 +262,11 @@ const FacultySubjectdetails = () => {
                         <div className='inline'>
                             <div className='block1'>
                                 <h3 className="label margint gap3">Subject Name:</h3>
-                                <input type="text" onChange={(e) => { setFacultySubject({ ...facultySubject, subjectName: e.target.value }) }} value={facultySubject.subjectName || ''} />
+                                <input type="text" onChange={(e) => { setFacultySubject({ ...facultySubject, subjectName: e.target.value }) }} value={facultySubject.subjectName || ''} readOnly/>
                             </div>
                             <div className='block1'>
                                 <h3 className="label margint gap3">Semester:</h3>
-                                <Select options={semOptions} placeholder='Select semester' styles={customStyles}
+                                {/* <Select options={semOptions} placeholder='Select semester' styles={customStyles}
                                     value={defaultsem()}
                                     onChange={(e) => { setFacultySubject({ ...facultySubject, semester: e.value }) }}
                                     theme={(theme) => ({
@@ -271,11 +276,13 @@ const FacultySubjectdetails = () => {
                                             primary: 'grey',
                                         },
                                     })}
-                                />
+                                    readOnly/> */}
+                                    <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, semester: e.value }) }} value={facultySubject.semester || ''} readOnly/>
+                            
                             </div>
                             <div className='block1'>
                                 <h3 className="label margint gap3">Sub Sequence:</h3>
-                                <Select options={subSequenceOptions} placeholder='Select sequence' styles={customStyles}
+                                {/* <Select options={subSequenceOptions} placeholder='Select sequence' styles={customStyles}
                                     value={defaultseq()}
                                     onChange={(e) => { setFacultySubject({ ...facultySubject, subSequence: e.value }) }}
                                     theme={(theme) => ({
@@ -285,13 +292,15 @@ const FacultySubjectdetails = () => {
                                             primary: 'grey',
                                         },
                                     })}
-                                />
+                                    readOnly /> */}
+                                    <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, subSequence: e.value }) }} value={facultySubject.subSequence || ''} readOnly/>
+                            
                             </div>
                         </div>
                         <div className='inline'>
                             <div className='block2'>
                                 <h3 className="label margint">Subject Type:</h3>
-                                <input type="text" onChange={(e) => { setFacultySubject({ ...facultySubject, subjectType: e.target.value }) }} value={facultySubject.subjectType || ''} />
+                                <input type="text" onChange={(e) => { setFacultySubject({ ...facultySubject, subjectType: e.target.value }) }} value={facultySubject.subjectType || ''} readOnly/>
                             </div>
                             <div className='block2'>
                                 <h3 className="label margint">Subject Type Explanation:</h3>
@@ -301,33 +310,34 @@ const FacultySubjectdetails = () => {
                         <div className='inline'>
                             <div className='block3'>
                                 <h3 className="label margint">Theory Marks:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, theoryMarks: e.target.value }) }} value={facultySubject.theoryMarks || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, theoryMarks: e.target.value }) }} value={facultySubject.theoryMarks || ''} readOnly/>
                             </div>
                             <div className='block3'>
                                 <h3 className="label margint">Sessional Marks:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, sessionalMarks: e.target.value }) }} value={facultySubject.sessionalMarks || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, sessionalMarks: e.target.value }) }} value={facultySubject.sessionalMarks || ''} readOnly/>
                             </div>
                             <div className='block3'>
                                 <h3 className="label margint">Termwork Marks:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, termworkMarks: e.target.value }) }} value={facultySubject.termworkMarks || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, termworkMarks: e.target.value }) }} value={facultySubject.termworkMarks || ''} readOnly/>
                             </div>
                             <div className='block3'>
                                 <h3 className="label margint">Practical Marks:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, practicalMarks: e.target.value }) }} value={facultySubject.practicalMarks || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, practicalMarks: e.target.value }) }} value={facultySubject.practicalMarks || ''} readOnly/>
                             </div>
                             <div className='block3'>
                                 <h3 className="label margint">Total Marks:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, totalMarks: e.target.value }) }} value={facultySubject.totalMarks || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, totalMarks: e.target.value }) }} value={parseInt(facultySubject.sessionalMarks || 0) + parseInt(facultySubject.theoryMarks || 0) +
+    parseInt(facultySubject.practicalMarks || 0) + parseInt(facultySubject.termworkMarks || 0)}  readOnly/>
                             </div>
                         </div>
                         <div className='inline'>
                             <div className='block4'>
                                 <h3 className="label margint">Lecture Hours:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, lectureHours: e.target.value }) }} value={facultySubject.lectureHours || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, lectureHours: e.target.value }) }} value={facultySubject.lectureHours || ''} readOnly/>
                             </div>
                             <div className='block4'>
                                 <h3 className="label margint">Tutorial:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, tutorial: e.target.value }) }} value={facultySubject.tutorial || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, tutorial: e.target.value }) }} value={facultySubject.tutorial || ''} readOnly/>
                             </div>
                             <div className='block4'>
                                 <h3 className="label margint">Practical Hours:</h3>
@@ -335,21 +345,23 @@ const FacultySubjectdetails = () => {
                             </div>
                             <div className='block4'>
                                 <h3 className="label margint">Total Hours:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, totalHours: e.target.value }) }} value={facultySubject.totalHours || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, totalHours: e.target.value }) }} value={parseInt(facultySubject.tutorial || 0) + parseInt(facultySubject.practicalHours || 0) +
+    parseInt(facultySubject.lectureHours || 0)}  readOnly/>
                             </div>
                         </div>
                         <div className='inline'>
                             <div className='block1'>
                                 <h3 className="label margint">Lecture And Theory Credit:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, lectureAndTheoryCredit: e.target.value }) }} value={facultySubject.lectureAndTheoryCredit || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, lectureAndTheoryCredit: e.target.value }) }} value={facultySubject.lectureAndTheoryCredit || ''} readOnly/>
                             </div>
                             <div className='block1'>
                                 <h3 className="label margint">Practical Credit:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, practicalCredit: e.target.value }) }} value={facultySubject.practicalCredit || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, practicalCredit: e.target.value }) }} value={facultySubject.practicalCredit || ''} readOnly/>
                             </div>
                             <div className='block1'>
                                 <h3 className="label margint">Total Credit:</h3>
-                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, totalCredit: e.target.value }) }} value={facultySubject.totalCredit || ''} />
+                                <input type="number" onChange={(e) => { setFacultySubject({ ...facultySubject, totalCredit: e.target.value }) }} value={parseInt(facultySubject.lectureAndTheoryCredit || 0) + parseInt(facultySubject.practicalCredit || 0)
+}  readOnly />
                             </div>
                         </div>
 

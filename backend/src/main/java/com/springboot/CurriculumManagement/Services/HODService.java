@@ -5,8 +5,6 @@ import com.springboot.CurriculumManagement.Entities.Faculty;
 import com.springboot.CurriculumManagement.Entities.Subjects;
 import com.springboot.CurriculumManagement.Payloads.HODDto;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Optional;

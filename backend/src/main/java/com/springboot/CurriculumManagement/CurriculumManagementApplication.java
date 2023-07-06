@@ -27,6 +27,6 @@ public class CurriculumManagementApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println(this.passwordEncoder.encode("manu"));
+		System.out.println(this.passwordEncoder.encode("ckb"));
 	}
 }

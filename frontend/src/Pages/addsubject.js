@@ -164,6 +164,11 @@ const Addsubject = () => {
             return `Subject Added Successfully!!`
           },
           icon: "🚀",
+          onClose: () => {
+            setTimeout(() => {
+                document.getElementById("addsubjectform").reset();
+            }, 5000);
+        }
         },
         error: {
           render({ data }) {

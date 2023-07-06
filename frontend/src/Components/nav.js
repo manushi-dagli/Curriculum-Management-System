@@ -16,7 +16,9 @@ function Navbar() {
     const handledashboard = () => {
         handleClick();
         if (isLoggedIn()) {
-            <Navigate to={`/${userlink}/Subjects`} />
+            <
+                Navigate to={`/${userlink}/Subjects`}
+            />
         }
     }
 
@@ -44,7 +46,8 @@ function Navbar() {
         handleClick();
     }
 
-    let dashlink = ISLOGGEDIN ? `/${userlink}/Subjects` : "/roles";
+    let dashlink = ISLOGGEDIN ? `/` : "/";
+    // let dashlink = ISLOGGEDIN ? `/${userlink}/Subjects` : "/roles";
     let loglink = ISLOGGEDIN ? "/" : "/roles";
     let logtitle = ISLOGGEDIN ? "Logout" : "Authorized Login";
     let loghandler = ISLOGGEDIN ? handlelogout : handlelogin;
@@ -60,27 +63,39 @@ function Navbar() {
 
 
 
-    return (
-        <>
-            <nav className="NavbarItem">
-                <h2 className="logo">
-                    Curriculum Management
-                </h2>
-                <div className="menu-icon" onClick={handleClick}>
-                    <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
-                </div>
-                <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-                    <li>
-                        <NavLink to={dashlink} onClick={handledashboard} className="nav-links-mobile coolBeans">Dashboard</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={loglink} onClick={loghandler} className="nav-links-mobile coolBeans">{logtitle}</NavLink>
-                    </li>
-                </ul>
+    return ( <
+>
+        <
+        nav className="NavbarItem" >
+            <
+        h2 className="logo" >
+                Curriculum Management <
+        /h2> <
+        div className="menu-icon"
+                    onClick={handleClick} >
+                    <
+        i className={clicked ? "fas fa-times" : "fas fa-bars"} > < /i> <
+        /div> <
+        ul className={clicked ? "nav-menu active" : "nav-menu"} >
+                            <
+        li >
+                                <
+        NavLink to={dashlink}
+                                    onClick={handledashboard}
+                                    className="nav-links-mobile coolBeans" > Download Curriculum < /NavLink> <
+        /li> <
+        li >
+                                        <
+        NavLink to={loglink}
+                                            onClick={loghandler}
+                                            className="nav-links-mobile coolBeans" style={{ marginRight: 45 }}> {logtitle} < /NavLink> <
+        /li> <
+        /ul>
 
-            </nav>
-        </>
-    )
+                                            <
+        /nav> <
+        />
+                                            )
 }
 
-export default Navbar;
+                                            export default Navbar;

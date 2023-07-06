@@ -110,6 +110,11 @@ const AppointPC = () => {
                         return `Program Coordinator Appointed Successfully!!`
                     },
                     icon: "🚀",
+                    onClose: () => {
+                        setTimeout(() => {
+                            document.getElementById("appointPCform").reset();
+                        }, 5000);
+                    }
                 },
                 error: {
                     render({ data }) {

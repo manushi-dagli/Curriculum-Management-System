@@ -44,6 +44,11 @@ function LoginPage() {
                         return `Login Successfully!!`
                     },
                     icon: "🚀",
+                    onClose: () => {
+                        setTimeout(() => {
+                            document.getElementById("loginfun").reset();
+                        }, 5000);
+                    }
                 },
                 error: {
                     render({ data }) {

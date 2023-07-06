@@ -2,7 +2,6 @@ package com.springboot.CurriculumManagement.Controller;
 
 import com.springboot.CurriculumManagement.Entities.Department;
 import com.springboot.CurriculumManagement.Entities.Faculty;
-import com.springboot.CurriculumManagement.Entities.SubjectFile;
 import com.springboot.CurriculumManagement.Entities.Subjects;
 import com.springboot.CurriculumManagement.Repository.SubjectFileRepository;
 import com.springboot.CurriculumManagement.Services.PCService;

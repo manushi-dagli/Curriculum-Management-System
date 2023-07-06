@@ -4,7 +4,6 @@ import com.springboot.CurriculumManagement.Entities.Department;
 import com.springboot.CurriculumManagement.Entities.Faculty;
 import com.springboot.CurriculumManagement.Entities.Subjects;
 import com.springboot.CurriculumManagement.Payloads.FacultyDto;
-import com.springboot.CurriculumManagement.Payloads.HODDto;
 import com.springboot.CurriculumManagement.Repository.DepartmentRepository;
 import com.springboot.CurriculumManagement.Repository.FacultyRepository;
 import com.springboot.CurriculumManagement.Repository.SubjectsRepository;

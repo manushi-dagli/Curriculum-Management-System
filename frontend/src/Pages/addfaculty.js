@@ -25,10 +25,11 @@ export default function Addfaculty() {
     const [faculty, setFaculty] = useState({ facultyId: "", facultyName: "", emailId: "", password: "" });
 
     const addfacultyform = (e) => {
+        // e.preventDefault();
         dept = getUserData().hodDto.dept;
         token = "Bearer " + getUserData().token;
         console.log(faculty)
-        const addfacultyresponse = axios.post(`${baseurl}/HOD/addnewfaculty`, faculty, { headers: { "Authorization": token } });
+        const addfacultyresponse =  axios.post(`${baseurl}/HOD/addnewfaculty`, faculty, { headers: { "Authorization": token } });
 
         toast.promise(
             addfacultyresponse,
@@ -40,10 +41,16 @@ export default function Addfaculty() {
                     icon: "✋",
                 },
                 success: {
+                   
                     render() {
                         return `Faculty Added Successfully!!`
                     },
                     icon: "🚀",
+                    onClose: () => {
+                        setTimeout(() => {
+                            document.getElementById("addfacultyform").reset();
+                        }, 5000);
+                    }
                 },
                 error: {
                     render({ data }) {
@@ -61,7 +68,7 @@ export default function Addfaculty() {
             }
         );
 
-        // document.getAllElementsById('addFacultyForm').reset();
+       
     }
 
     return (

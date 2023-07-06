@@ -1,14 +1,12 @@
 package com.springboot.CurriculumManagement.Repository;
 
 import com.springboot.CurriculumManagement.Entities.Department;
-import com.springboot.CurriculumManagement.Entities.Faculty;
 import com.springboot.CurriculumManagement.Entities.Subjects;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @Repository
@@ -20,6 +18,13 @@ public interface SubjectsRepository extends JpaRepository<Subjects,String> {
 
     @Query(value = "select s from Subjects s where s.dept=?1 order by s.semester")
     List<Subjects> findAllByDeptId(Department deptId);
+
+
+//    @Query("SELECT s, f.facultyName FROM Subjects s JOIN Faculty f ON s.facultyId = f.facultyId WHERE s.dept = ?1 ORDER BY s.semester")
+//    List<SubjectANDFaculty> findAllByDeptId(Department deptId);
+
+
+
 
     @Query(value = "select s from Subjects s where s.facultyId=?1 order by s.semester")
     List<Subjects> findAllByFacultyId(String facultyId);

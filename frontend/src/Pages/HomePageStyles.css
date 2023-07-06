@@ -1,86 +1,84 @@
 .container {
-  width: 50%;
-  max-height: 230px;
-  background-color: #222;
-  color: white;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
-  text-align: center;
-  padding: 20px;
+    width: 50%;
+    max-height: 230px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
-.title{
-  position: absolute;
-  align-self: center;
-  font-size: 2rem;
-  top: 110px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.title {
+    position: absolute;
+    align-self: center;
+    font-size: 2rem;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 input[type="text"],
 input[type="number"],
 input[type="password"],
 input[type="date"] {
-  width: 80%;
-  border-color: black;
-  border-radius: 2px;
-  padding: 7px;
-  margin-bottom: 10px;
+    width: 80%;
+    border-color: black;
+    border-radius: 2px;
+    padding: 7px;
+    margin-bottom: 10px;
 }
 
-
 h3 {
-  margin: 10px;
+    margin: 10px;
 }
 
 .SubmitButton {
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-  background-color: #fafafa;
-  border-radius: 3px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #222;
-  margin: 20px;
-  cursor: pointer;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background-color: #fafafa;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    margin: 20px;
+    cursor: pointer;
 }
 
 .label {
-  text-align: left;
-  width: '80%';
-  margin-left: 10%;
-  margin-bottom: 5px;
-  margin-top: 15px;
+    text-align: left;
+    width: '80%';
+    margin-left: 10%;
+    margin-bottom: 5px;
+    margin-top: 15px;
 }
 
-
 .coolBeans {
-  overflow: hidden;
-  position: relative;
-  text-decoration: none;
-  transition: .2s transform ease-in-out;
-  will-change: transform;
-  z-index: 0;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
 }
 
 .coolBeans:hover {
-  border: 2px solid transparent;
-  color: black;
-  transform: scale(1.05);
-  will-change: transform;
+    border: 2px solid transparent;
+    color: black;
+    transform: scale(1.05);
+    will-change: transform;
 }
 
 .coolBeans:active {
-  color: darkgray;
+    color: darkgray;
 }
 
-@media screen and (max-width: 850px){
-  .container{
-      width: 80%;
-  }
+@media screen and (max-width: 850px) {
+    .container {
+        width: 80%;
+    }
 }

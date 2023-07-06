@@ -59,6 +59,8 @@ const PCSubjectdetails = () => {
   const [viewPdf, setViewPdf] = useState(null);
   const [selectedPDFFile, setSelectedPDFFile] = useState(null);
   const [pdfFileError, setPdfFileError] = useState('');
+  const [totalMarks, setTotalMarks] = useState(0);
+
 
 
   useEffect(() => {
@@ -141,6 +143,7 @@ const PCSubjectdetails = () => {
 
   const updatesubjectform = (e) => {
     e.preventDefault();
+    
     console.log(pcSubject)
     dept = getUserData().pcDto.dept;
     token = "Bearer " + getUserData().token;
@@ -159,6 +162,11 @@ const PCSubjectdetails = () => {
             return `Subject Details stored Successfully!!`
           },
           icon: "🚀",
+          onClose: () => {
+            setTimeout(() => {
+                document.getElementById("updatesubjectform").reset();
+            }, 5000);
+        }
         },
         error: {
           render({ data }) {
@@ -261,7 +269,10 @@ const PCSubjectdetails = () => {
               </div>
               <div className='block3'>
                 <h3 className="label margint">Total Marks:</h3>
-                <input type="number" onChange={(e) => { setPCSubject({ ...pcSubject, totalMarks: e.target.value }) }} value={pcSubject.totalMarks || ''} />
+                 <input type="number" onChange={(e) => { setPCSubject({ ...pcSubject, totalMarks: e.target.value }) }} value={parseInt(pcSubject.sessionalMarks || 0) + parseInt(pcSubject.theoryMarks || 0) +
+    parseInt(pcSubject.practicalMarks || 0) + parseInt(pcSubject.termworkMarks || 0)}  readOnly/>
+                  
+                  
               </div>
             </div>
             <div className='inline'>
@@ -279,7 +290,8 @@ const PCSubjectdetails = () => {
               </div>
               <div className='block4'>
                 <h3 className="label margint">Total Hours:</h3>
-                <input type="number" onChange={(e) => { setPCSubject({ ...pcSubject, totalHours: e.target.value }) }} value={pcSubject.totalHours || ''} />
+                <input type="number" onChange={(e) => { setPCSubject({ ...pcSubject, totalHours: e.target.value }) }} value={parseInt(pcSubject.tutorial || 0) + parseInt(pcSubject.practicalHours || 0) +
+    parseInt(pcSubject.lectureHours || 0)}  readOnly />
               </div>
             </div>
             <div className='inline'>
@@ -293,7 +305,8 @@ const PCSubjectdetails = () => {
               </div>
               <div className='block1'>
                 <h3 className="label margint">Total Credit:</h3>
-                <input type="number" onChange={(e) => { setPCSubject({ ...pcSubject, totalCredit: e.target.value }) }} value={pcSubject.totalCredit || ''} />
+                <input type="number" onChange={(e) => { setPCSubject({ ...pcSubject, totalCredit: e.target.value }) }} value={parseInt(pcSubject.lectureAndTheoryCredit || 0) + parseInt(pcSubject.practicalCredit || 0)
+}  readOnly/>
               </div>
             </div>
             <div>
@@ -318,7 +331,7 @@ const PCSubjectdetails = () => {
           </form>
         </OnHoverScrollContainer>
       </div>
-    </div >
+    </div>
   )
 }
 

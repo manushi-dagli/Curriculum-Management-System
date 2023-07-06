@@ -2,23 +2,19 @@ package com.springboot.CurriculumManagement.Services;
 
 import com.springboot.CurriculumManagement.Entities.*;
 import com.springboot.CurriculumManagement.Exceptions.ResourceNotFoundException;
-import com.springboot.CurriculumManagement.Payloads.HODDto;
 import com.springboot.CurriculumManagement.Payloads.PCDto;
 import com.springboot.CurriculumManagement.Repository.DepartmentRepository;
 import com.springboot.CurriculumManagement.Repository.FacultyRepository;
-import com.springboot.CurriculumManagement.Repository.PCRepository;
 import com.springboot.CurriculumManagement.Repository.SubjectsRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.data.relational.core.sql.In;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;

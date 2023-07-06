@@ -75,7 +75,7 @@ const Deletesubject = () => {
   const deletesubjecthandle = (option) => {
     setSubject(option);
   }
-  const deletefacultyform = (e) => {
+  const deletesubjectform = (e) => {
     // e.preventDefault();
     dept = getUserData().pcDto.dept;
     token = "Bearer " + getUserData().token;
@@ -98,6 +98,11 @@ const Deletesubject = () => {
             return `Subject deleted Successfully!!`
           },
           icon: "🚀",
+          onClose: () => {
+            setTimeout(() => {
+                document.getElementById("deletesubjectform").reset();
+            }, 5000);
+        }
         },
         error: {
           render({ data }) {
@@ -121,7 +126,7 @@ const Deletesubject = () => {
       <ToastContainer />
 
       <div className="container">
-        <form onSubmit={deletefacultyform} >
+        <form onSubmit={deletesubjectform} >
 
           <h3 className="label margint">Subjects:</h3>
           <Select options={subjectsOption} placeholder='Select subject to delete' styles={customStyles}
